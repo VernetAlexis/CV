@@ -1,0 +1,131 @@
+$text-color: rgb(200, 200, 200);
+$line-color: white;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('./images/background.jpg') fixed center;
+    position: relative;
+}
+
+header {
+    padding: 20px 0 0 20px;
+    display: flex;
+    position: relative;
+
+    #profil {
+        height: 200px;
+        width: 200px;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid $line-color;
+        }
+    }
+
+    #name {
+        padding: 50px 0 0 20px;
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            color: $text-color;
+        }
+
+        h2 {
+            text-align: center;
+            color: $text-color;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $line-color;
+        position: absolute;
+        top: 180px;
+        left: 0px;
+        z-index: -1;
+    }
+}
+
+nav {
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    height: 100vh;
+    width: 350px;
+    padding-right: 20px;
+    padding-top: 220px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    transform: translateX(-350px);
+    transition: 1000ms;
+
+    a {
+        text-decoration: none;
+        text-align: end;
+        font-size: 1.5rem;
+        color: $text-color;
+        padding-bottom: 10px;
+    }
+
+    #nav-button {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 182px;
+        right: -132px;
+        color: red;
+        text-align: center;
+        font-size: 2.5rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 0 0 100% 0;
+        cursor: pointer;
+        border-right: 2px solid $line-color;
+        border-bottom: 2px solid $line-color;
+        transition: 1000ms;
+        
+        #icon {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            top: 60px;
+            left: 30px;
+            border-radius: 2px;
+
+            &::before {
+                content: "";
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                position: absolute;
+                top: -10px;
+                left: 0px;
+                border-radius: 2px;
+            }
+    
+            &::after {
+                content: "";
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                position: absolute;
+                top: 10px;
+                left: 0px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
