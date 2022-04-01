@@ -31,7 +31,7 @@ header {
     }
 
     #name {
-        padding: 50px 0 0 20px;
+        padding: 30px 20px 0 20px;
 
         h1 {
             text-transform: uppercase;
@@ -96,7 +96,17 @@ nav {
         border-bottom: 2px solid $line-color;
         transition: 1000ms;
         
-        #icon {
+        #icon-top {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            border-radius: 2px;
+        }
+
+        #icon-middle {
             width: 35px;
             height: 5px;
             background-color: white;
@@ -104,28 +114,16 @@ nav {
             top: 60px;
             left: 30px;
             border-radius: 2px;
-
-            &::before {
-                content: "";
-                width: 35px;
-                height: 5px;
-                background-color: white;
-                position: absolute;
-                top: -10px;
-                left: 0px;
-                border-radius: 2px;
-            }
-    
-            &::after {
-                content: "";
-                width: 35px;
-                height: 5px;
-                background-color: white;
-                position: absolute;
-                top: 10px;
-                left: 0px;
-                border-radius: 2px;
-            }
+        }
+        
+        #icon-bottom {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            top: 70px;
+            left: 30px;
+            border-radius: 2px;
         }
     }
 }

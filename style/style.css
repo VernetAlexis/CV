@@ -26,7 +26,7 @@ header #profil img {
   border: 2px solid white;
 }
 header #name {
-  padding: 50px 0 0 20px;
+  padding: 30px 20px 0 20px;
 }
 header #name h1 {
   text-transform: uppercase;
@@ -85,7 +85,16 @@ nav #nav-button {
   border-bottom: 2px solid white;
   transition: 1000ms;
 }
-nav #nav-button #icon {
+nav #nav-button #icon-top {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  border-radius: 2px;
+}
+nav #nav-button #icon-middle {
   width: 35px;
   height: 5px;
   background-color: white;
@@ -94,24 +103,13 @@ nav #nav-button #icon {
   left: 30px;
   border-radius: 2px;
 }
-nav #nav-button #icon::before {
-  content: "";
+nav #nav-button #icon-bottom {
   width: 35px;
   height: 5px;
   background-color: white;
   position: absolute;
-  top: -10px;
-  left: 0px;
-  border-radius: 2px;
-}
-nav #nav-button #icon::after {
-  content: "";
-  width: 35px;
-  height: 5px;
-  background-color: white;
-  position: absolute;
-  top: 10px;
-  left: 0px;
+  top: 70px;
+  left: 30px;
   border-radius: 2px;
 }
 
