@@ -10,13 +10,15 @@ body {
 
 header {
   padding: 20px 0 0 20px;
+  height: 160px;
   display: flex;
   position: relative;
+  background: linear-gradient(165deg, rgba(0, 0, 0, 0.8) 70%, rgba(255, 255, 255, 0.1) 100%);
 }
 header #profil {
   height: 200px;
   width: 200px;
-  z-index: 1;
+  z-index: 2;
 }
 header #profil img {
   width: 100%;
@@ -48,34 +50,50 @@ header::after {
   z-index: -1;
 }
 
-nav {
+#navbar {
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: #0a0a0a;
   height: 100vh;
   width: 350px;
-  padding-right: 20px;
-  padding-top: 220px;
+  padding-top: 240px;
   box-sizing: border-box;
   position: absolute;
   top: 0px;
   transform: translateX(-350px);
   transition: 1000ms;
+  z-index: 1;
+  border-right: 2px solid white;
 }
-nav a {
+#navbar a {
+  width: 100%;
+  box-sizing: border-box;
   text-decoration: none;
   text-align: end;
   font-size: 1.5rem;
   color: #c8c8c8;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding: 10px 20px 10px 0;
+  transition: 500ms;
+  background-image: linear-gradient(90deg, black, rgba(255, 255, 255, 0));
+  box-shadow: inset 70px 0 20px -10px rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5) -2px 0px 2px 2px;
 }
-nav #nav-button {
+#navbar a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: none;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  width: 110%;
+  border-radius: 0 30px 30px 0;
+}
+
+#nav-button {
   width: 130px;
   height: 130px;
   position: absolute;
   top: 182px;
-  right: -132px;
-  color: red;
+  left: 0px;
   text-align: center;
   font-size: 2.5rem;
   background-color: rgba(0, 0, 0, 0.8);
@@ -83,9 +101,9 @@ nav #nav-button {
   cursor: pointer;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
-  transition: 1000ms;
+  animation: ease-in-out;
 }
-nav #nav-button #icon-top {
+#nav-button #icon-top {
   width: 35px;
   height: 5px;
   background-color: white;
@@ -94,7 +112,7 @@ nav #nav-button #icon-top {
   left: 30px;
   border-radius: 2px;
 }
-nav #nav-button #icon-middle {
+#nav-button #icon-middle {
   width: 35px;
   height: 5px;
   background-color: white;
@@ -103,7 +121,7 @@ nav #nav-button #icon-middle {
   left: 30px;
   border-radius: 2px;
 }
-nav #nav-button #icon-bottom {
+#nav-button #icon-bottom {
   width: 35px;
   height: 5px;
   background-color: white;
