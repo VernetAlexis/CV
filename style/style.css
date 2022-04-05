@@ -54,7 +54,7 @@ header::after {
   display: flex;
   flex-direction: column;
   background: #0a0a0a;
-  height: 100vh;
+  height: 1000px;
   width: 350px;
   padding-top: 240px;
   box-sizing: border-box;
@@ -64,6 +64,8 @@ header::after {
   transition: 1000ms;
   z-index: 1;
   border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 0 0 350px 0;
 }
 #navbar a {
   width: 100%;
@@ -96,7 +98,7 @@ header::after {
   left: 0px;
   text-align: center;
   font-size: 2.5rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: #0a0a0a;
   border-radius: 0 0 100% 0;
   cursor: pointer;
   border-right: 2px solid white;
@@ -129,6 +131,51 @@ header::after {
   top: 70px;
   left: 30px;
   border-radius: 2px;
+}
+
+section .section-title {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
+  text-align: center;
+  color: #c8c8c8;
+  text-transform: uppercase;
+  margin-top: 41px;
+  font-size: 1.5em;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+section .section-block {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  color: #c8c8c8;
+  margin-top: 20px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+section .section-block .block-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#accueil {
+  display: block;
+}
+
+#formation {
+  display: none;
+}
+
+#parcours {
+  display: none;
+}
+
+#portfolio {
+  display: none;
+}
+
+#contact {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

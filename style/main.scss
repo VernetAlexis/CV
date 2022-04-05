@@ -60,11 +60,10 @@ header {
 }
 
 #navbar {
-
     display: flex;
     flex-direction: column;
     background: rgb(10, 10, 10);
-    height: 100vh;
+    height: 1000px;
     width: 350px;
     padding-top: 240px;
     box-sizing: border-box;
@@ -74,6 +73,8 @@ header {
     transition: 1000ms;
     z-index: 1;
     border-right: 2px solid $line-color;
+    border-bottom: 2px solid $line-color;
+    border-radius: 0 0 350px 0;
 
     a {
         width: 100%;
@@ -108,7 +109,7 @@ header {
     left: 0px;
     text-align: center;
     font-size: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgb(10, 10, 10);
     border-radius: 0 0 100% 0;
     cursor: pointer;
     border-right: 2px solid $line-color;
@@ -144,4 +145,53 @@ header {
         left: 30px;
         border-radius: 2px;
     }
+}
+
+section {
+    .section-title {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+        text-align: center;
+        color: $text-color;
+        text-transform: uppercase;
+        margin-top: 41px;
+        font-size: 1.5em;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    
+    .section-block {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        color: $text-color;
+        margin-top: 20px;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    
+        .block-title {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
+
+#accueil {
+    display: block;
+}
+
+#formation {
+    display: none;
+}
+
+#parcours {
+    display: none;
+}
+
+#portfolio {
+    display: none;
+}
+
+#contact {
+    display: none;
 }
