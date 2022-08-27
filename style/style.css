@@ -103,6 +103,12 @@ header::after {
   cursor: pointer;
   border-right: 2px solid white;
   border-bottom: 2px solid white;
+  border-left-color: white;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-top-color: white;
+  border-top-style: solid;
+  border-top-width: 0px;
   animation: ease-in-out;
 }
 #nav-button #icon-top {

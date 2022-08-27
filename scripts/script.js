@@ -5,23 +5,36 @@ const buttonIconTop = document.getElementById('icon-top')
 const buttonIconMiddle = document.getElementById('icon-middle')
 const buttonIconBottom = document.getElementById('icon-bottom')
 const profilPicture = document.getElementById('profil')
-let navbarState = 'close'
+let navbarOpen = false
 
-navbarButton.addEventListener('click', function() {
-    if (navbarState === 'close') {
+function navBarControl () {
+    if (navbarOpen === false) {
         sideNavbar.style.transform = 'translateX(0px)'
         hideBurgerButton()
         setTimeout(buttonBurgerToCross, 1000)
         setTimeout(revealCrossButton, 1050)
-        navbarState = 'open'
-    } else if (navbarState === 'open') {
+        navbarOpen = true
+    } else if (navbarOpen === true) {
         sideNavbar.style.transform = 'translateX(-350px)'
         hideCrossButton()
         setTimeout(buttonCrossToBurger, 1000)
         setTimeout(revealBurgerButton, 1050)
-        navbarState = 'close'
+        navbarOpen = false
+    }
+}
+
+navbarButton.addEventListener('click', function(e) {
+    e.stopPropagation()
+    e.preventDefault()
+    navBarControl ()
+})
+
+document.body.addEventListener('click', function() {
+    if (navbarOpen === true) {
+        navBarControl ()
     }
 })
+
 
 function hideBurgerButton() {
     navbarButton.style.opacity = '0'
@@ -30,7 +43,8 @@ function hideBurgerButton() {
 
 function buttonBurgerToCross () {
     navbarButton.style.left = '266px'
-    navbarButton.style.border = 'solid 2px white'
+    navbarButton.style.borderLeftWidth = '2px'
+    navbarButton.style.borderTopWidth = '2px'
     navbarButton.style.borderRadius = '50%'
     navbarButton.style.width = '50px'
     navbarButton.style.height = '50px'
@@ -59,8 +73,8 @@ function hideCrossButton() {
 
 function buttonCrossToBurger () {
     navbarButton.style.left = '-132px'
-    navbarButton.style.borderLeft = 'none'
-    navbarButton.style.borderTop = 'none'
+    navbarButton.style.borderLeftWidth = '0px'
+    navbarButton.style.borderTopWidth = '0px'
     navbarButton.style.borderRadius = '0 0 100% 0'
     navbarButton.style.width = '130px'
     navbarButton.style.height = '130px'

@@ -87,10 +87,10 @@ header {
         padding: 10px 20px 10px 0;
         transition: 500ms;
         background-image: linear-gradient(90deg, black, rgba($color: white, $alpha: 0));
-        box-shadow: inset 70px 0 20px -10px rgba($color: white, $alpha: 0.3), rgba($color: white, $alpha: 0.5) -2px 0px 2px 2px;
+        box-shadow: inset 70px 0 20px -10px rgba($color: $line-color, $alpha: 0.3), rgba($color: $line-color, $alpha: 0.5) -2px 0px 2px 2px;
 
         &:hover {
-            background-color: white;
+            background-color: $line-color;
             color: black;
             box-shadow: none;
             font-size: 1.8rem;
@@ -114,6 +114,12 @@ header {
     cursor: pointer;
     border-right: 2px solid $line-color;
     border-bottom: 2px solid $line-color;
+    border-left-color: $line-color;
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-top-color: $line-color;
+    border-top-style: solid;
+    border-top-width: 0px;
     animation: ease-in-out;
     
     #icon-top {
@@ -156,8 +162,8 @@ section {
         text-transform: uppercase;
         margin-top: 41px;
         font-size: 1.5em;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
+        border-top: 2px solid $line-color;
+        border-bottom: 2px solid $line-color;
     }
     
     .section-block {
@@ -165,8 +171,8 @@ section {
         padding: 20px;
         color: $text-color;
         margin-top: 20px;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
+        border-top: 2px solid $line-color;
+        border-bottom: 2px solid $line-color;
     
         .block-title {
             text-transform: uppercase;
