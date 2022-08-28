@@ -1,5 +1,6 @@
-$text-color: rgb(200, 200, 200);
-$line-color: white;
+$text-color: black;
+$line-color: black;
+$primary-color: rgb(100, 180, 195);
 
 * {
     margin: 0;
@@ -16,7 +17,7 @@ header {
     height: 160px;
     display: flex;
     position: relative;
-    background: linear-gradient(165deg, rgba(0,0,0,0.8) 70%, rgba(255,255,255,0.1) 100%);
+    background: linear-gradient(165deg, rgba($color: $primary-color, $alpha: 0.8) 70%, rgba(255,255,255,0.1) 100%);
 
     #profil {
         height: 200px;
@@ -62,7 +63,7 @@ header {
 #navbar {
     display: flex;
     flex-direction: column;
-    background: rgb(10, 10, 10);
+    background: $primary-color;
     height: 1000px;
     width: 350px;
     padding-top: 240px;
@@ -70,7 +71,7 @@ header {
     position: absolute;
     top: 0px;
     transform: translateX(-350px);
-    transition: 1000ms;
+    transition: 800ms;
     z-index: 1;
     border-right: 2px solid $line-color;
     border-bottom: 2px solid $line-color;
@@ -91,7 +92,7 @@ header {
 
         &:hover {
             background-color: $line-color;
-            color: black;
+            color: white;
             box-shadow: none;
             font-size: 1.8rem;
             font-weight: bolder;
@@ -109,7 +110,7 @@ header {
     left: 0px;
     text-align: center;
     font-size: 2.5rem;
-    background: rgb(10, 10, 10);
+    background: $primary-color;
     border-radius: 0 0 100% 0;
     cursor: pointer;
     border-right: 2px solid $line-color;
@@ -155,7 +156,7 @@ header {
 
 section {
     .section-title {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba($color: $primary-color, $alpha: 0.8);
         padding: 20px 0;
         text-align: center;
         color: $text-color;
@@ -167,7 +168,7 @@ section {
     }
     
     .section-block {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba($color: $primary-color, $alpha: 0.8);
         padding: 20px;
         color: $text-color;
         margin-top: 20px;
