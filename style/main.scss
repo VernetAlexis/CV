@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 $text-color: black;
 $line-color: black;
-$primary-color: rgb(100, 180, 195);
+$primary-color: rgb(10, 210, 165);
+$text-fonts: 'Russo One', sans-serif;
 
 * {
     margin: 0;
@@ -9,7 +12,10 @@ $primary-color: rgb(100, 180, 195);
 
 body {
     background: url('./images/background.jpg') fixed center;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    font-family: $text-fonts;
 }
 
 header {
@@ -18,6 +24,7 @@ header {
     display: flex;
     position: relative;
     background: linear-gradient(165deg, rgba($color: $primary-color, $alpha: 0.8) 70%, rgba(255,255,255,0.1) 100%);
+    box-shadow: 2px 0 15px;
 
     #profil {
         height: 200px;
@@ -122,6 +129,7 @@ header {
     border-top-style: solid;
     border-top-width: 0px;
     animation: ease-in-out;
+    box-shadow: 0 1px 5px;
     
     #icon-top {
         width: 35px;
@@ -156,6 +164,8 @@ header {
 
 section {
     .section-title {
+        width: 50%;
+        margin: auto;
         background-color: rgba($color: $primary-color, $alpha: 0.8);
         padding: 20px 0;
         text-align: center;
@@ -163,21 +173,53 @@ section {
         text-transform: uppercase;
         margin-top: 41px;
         font-size: 1.5em;
-        border-top: 2px solid $line-color;
-        border-bottom: 2px solid $line-color;
+        box-shadow: 2px 2px 3px;
+        border-radius: 50px;
     }
     
     .section-block {
+        width: 85%;
+        margin: auto;
         background-color: rgba($color: $primary-color, $alpha: 0.8);
         padding: 20px;
         color: $text-color;
-        margin-top: 20px;
-        border-top: 2px solid $line-color;
-        border-bottom: 2px solid $line-color;
-    
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 3px;
+        
         .block-title {
             text-transform: uppercase;
             margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.techno-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .techno-card {
+        width: 100px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: 15px;
+        box-shadow: 2px 2px 5px;
+        background-color: rgba(0, 0, 255, 0.3);
+
+        h5 {
+            text-align: center;
+        }
+
+        img {
+            height: 100px;
+            width: 100%;
+            object-fit: fill;
+        }
+
+        .techno-card_star {
             text-align: center;
         }
     }

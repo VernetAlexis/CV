@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,10 @@
 
 body {
   background: url("./images/background.jpg") fixed center;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  font-family: "Russo One", sans-serif;
 }
 
 header {
@@ -13,7 +17,8 @@ header {
   height: 160px;
   display: flex;
   position: relative;
-  background: linear-gradient(165deg, rgba(100, 180, 195, 0.8) 70%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(165deg, rgba(10, 210, 165, 0.8) 70%, rgba(255, 255, 255, 0.1) 100%);
+  box-shadow: 2px 0 15px;
 }
 header #profil {
   height: 200px;
@@ -53,7 +58,7 @@ header::after {
 #navbar {
   display: flex;
   flex-direction: column;
-  background: #64b4c3;
+  background: #0ad2a5;
   height: 1000px;
   width: 350px;
   padding-top: 240px;
@@ -98,7 +103,7 @@ header::after {
   left: 0px;
   text-align: center;
   font-size: 2.5rem;
-  background: #64b4c3;
+  background: #0ad2a5;
   border-radius: 0 0 100% 0;
   cursor: pointer;
   border-right: 2px solid black;
@@ -110,6 +115,7 @@ header::after {
   border-top-style: solid;
   border-top-width: 0px;
   animation: ease-in-out;
+  box-shadow: 0 1px 5px;
 }
 #nav-button #icon-top {
   width: 35px;
@@ -140,27 +146,57 @@ header::after {
 }
 
 section .section-title {
-  background-color: rgba(100, 180, 195, 0.8);
+  width: 50%;
+  margin: auto;
+  background-color: rgba(10, 210, 165, 0.8);
   padding: 20px 0;
   text-align: center;
   color: black;
   text-transform: uppercase;
   margin-top: 41px;
   font-size: 1.5em;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  box-shadow: 2px 2px 3px;
+  border-radius: 50px;
 }
 section .section-block {
-  background-color: rgba(100, 180, 195, 0.8);
+  width: 85%;
+  margin: auto;
+  background-color: rgba(10, 210, 165, 0.8);
   padding: 20px;
   color: black;
-  margin-top: 20px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px;
 }
 section .section-block .block-title {
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.techno-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.techno-section .techno-card {
+  width: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 15px;
+  box-shadow: 2px 2px 5px;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.techno-section .techno-card h5 {
+  text-align: center;
+}
+.techno-section .techno-card img {
+  height: 100px;
+  width: 100%;
+  object-fit: fill;
+}
+.techno-section .techno-card .techno-card_star {
   text-align: center;
 }
 
