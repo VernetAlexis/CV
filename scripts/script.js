@@ -45,12 +45,8 @@ document.getElementById('accueil-link').addEventListener('click', function () {
     currentPage = 'accueil'
     changePage(currentPage);
 })
-document.getElementById('formation-link').addEventListener('click', function () {
-    currentPage = 'formation'
-    changePage(currentPage);
-})
-document.getElementById('parcours-link').addEventListener('click', function () {
-    currentPage = 'parcours'
+document.getElementById('experience-link').addEventListener('click', function () {
+    currentPage = 'experience'
     changePage(currentPage);
 })
 document.getElementById('portfolio-link').addEventListener('click', function () {
@@ -66,36 +62,25 @@ function changePage (currentPage) {
     switch (currentPage) {
         case 'accueil':
             document.getElementById('accueil').style.display = 'block'
-            document.getElementById('formation').style.display = 'none'
-            document.getElementById('parcours').style.display = 'none'
+            document.getElementById('experience').style.display = 'none'
             document.getElementById('portfolio').style.display = 'none'
             document.getElementById('contact').style.display = 'none'
             break
-        case 'formation':
+        case 'experience':
             document.getElementById('accueil').style.display = 'none'
-            document.getElementById('formation').style.display = 'block'
-            document.getElementById('parcours').style.display = 'none'
-            document.getElementById('portfolio').style.display = 'none'
-            document.getElementById('contact').style.display = 'none'
-            break
-        case 'parcours':
-            document.getElementById('accueil').style.display = 'none'
-            document.getElementById('formation').style.display = 'none'
-            document.getElementById('parcours').style.display = 'block'
+            document.getElementById('experience').style.display = 'block'
             document.getElementById('portfolio').style.display = 'none'
             document.getElementById('contact').style.display = 'none'
             break
         case 'portfolio':
             document.getElementById('accueil').style.display = 'none'
-            document.getElementById('formation').style.display = 'none'
-            document.getElementById('parcours').style.display = 'none'
+            document.getElementById('experience').style.display = 'none'
             document.getElementById('portfolio').style.display = 'block'
             document.getElementById('contact').style.display = 'none'
             break
         case 'contact':
             document.getElementById('accueil').style.display = 'none'
-            document.getElementById('formation').style.display = 'none'
-            document.getElementById('parcours').style.display = 'none'
+            document.getElementById('experience').style.display = 'none'
             document.getElementById('portfolio').style.display = 'none'
             document.getElementById('contact').style.display = 'block'
             break
